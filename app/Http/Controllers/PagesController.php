@@ -10,6 +10,10 @@ class PagesController extends Controller
         return view('welcome');
     }
 
+    public function foods() {
+        return view('foods');
+    }
+
     public function about(){
         return view('about');
     }
