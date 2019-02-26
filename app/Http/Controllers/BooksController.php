@@ -8,10 +8,12 @@ use App\Book;
 
 class BooksController extends Controller
 {
-    public function books(){
+    public function showBook(){
 
         $books = Book::all();
 
-        return view('books');
+        return $books;
+
+        return view('books.shop');
     }
 }

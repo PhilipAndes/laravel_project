@@ -4,14 +4,20 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
 class PagesController extends Controller
 {
     public function home() {
         return view('welcome');
     }
 
-    public function books() {
-        return view('books');
+    public function shop() {
+
+        $books = \App\Book::all();
+
+        //return $books;
+
+        return view('shop', compact('books'));
     }
 
     public function about(){

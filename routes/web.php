@@ -12,11 +12,11 @@
 */
 
 Route::get('/', 'PagesController@home');
-Route::get('/books', 'PagesController@books');
+Route::get('/shop', 'PagesController@shop');
 Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
 
-Route::get('/books', 'BooksController@books');
+//Route::get('/shop', 'BooksController@showBook');
 
 
 // Route::get('/', function () {
