@@ -15,9 +15,21 @@ class PagesController extends Controller
 
         $books = \App\Book::all();
 
-        //return $books;
+        $fantasy = \App\Book::all()->where('genre', 'Fantasy');
 
-        return view('shop', compact('books'));
+        $thriller = \App\Book::all()->where('genre', 'Thriller');
+
+        $romance = \App\Book::all()->where('genre', 'Romance');
+
+        $horror = \App\Book::all()->where('genre', 'Horror');
+
+        $biography = \App\Book::all()->where('genre', 'Biography');
+
+        return view('shop', compact('books', 'fantasy', 'thriller', 'romance', 'horror', 'biography'));
+    }
+
+    public function bookInfo() {
+        return view('bookInfo');
     }
 
     public function about(){
