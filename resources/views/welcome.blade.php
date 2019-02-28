@@ -12,8 +12,6 @@
         </h1>
     </div>
 
-    
-    {{-- <div class="homePage debug"></div> --}}
 
    
 

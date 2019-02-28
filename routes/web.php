@@ -13,21 +13,12 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('/shop', 'PagesController@shop');
-Route::get('/bookInfo', 'PagesController@bookInfo');
-Route::get('/about', 'PagesController@about');
 Route::get('/contact', 'PagesController@contact');
+Route::get('/home','HomeController@index');
 
-//Route::get('/shop', 'BooksController@showBook');
+//Route::get('/bookInfo', 'PagesController@bookInfo'); 
+Route::get('/bookInfo/{book_id}', 'BooksController@bookInfo');
 
+Auth::routes();
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/about', function () {
-//     return view('about');
-// });
-
-// Route::get('/contact', function () {
-//     return view('contact');
-// });
+Route::get('/home', 'HomeController@index')->name('home');

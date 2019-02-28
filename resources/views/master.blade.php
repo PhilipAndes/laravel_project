@@ -11,10 +11,23 @@
     
     <div class="nav debug">
         <ul class="flexContainer1 debug">
-            <li><a href="/">Home</a></li>
-            <li><a href="/shop">Shop</a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact Us</a></li>
+
+            <li class="{{ Request::is('/') ? 'active' : '' }}">
+                <a href="{{ url('/') }}">Home</a>
+            </li>
+
+            <li class="{{ Request::is('shop') ? 'active' : '' }}">
+                <a href="{{ url('shop') }}">Shop</a>
+            </li>
+
+            <li class="{{ Request::is('contact') ? 'active' : '' }}">
+                <a href="{{ url('contact') }}">Contact</a>
+            </li>
+
+            <li class="{{ Request::is('home') ? 'active' : '' }}">
+                <a href="{{ url('home') }}">Login</a>
+            </li>
+
         </ul>
     </div>
 

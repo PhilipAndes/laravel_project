@@ -8,113 +8,121 @@
         <h1>Books</h1>
     </div>
 
-        <!-- Side navigation !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+    <!-- Side navigation !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
     <div class="filterBar debug">
         <div class="filterTab">    
-                <button class="tablinks" onclick="openBook(event, 'allBooks')" id="defaultOpen">All Books</button>
-                <button class="tablinks" onclick="openBook(event, 'Fantasy')">Fantasy</button>
-                <button class="tablinks" onclick="openBook(event, 'Thriller')">Thriller</button>
-                <button class="tablinks" onclick="openBook(event, 'Romance')">Romance</button>
-                <button class="tablinks" onclick="openBook(event, 'Horror')">Horror</button>
-                <button class="tablinks" onclick="openBook(event, 'Biography')">Biography</button>
+            <button class="tablinks" onclick="openBook(event, 'allBooks')" id="defaultOpen">All Books</button>
+            <button class="tablinks" onclick="openBook(event, 'Fantasy')">Fantasy</button>
+            <button class="tablinks" onclick="openBook(event, 'Thriller')">Thriller</button>
+            <button class="tablinks" onclick="openBook(event, 'Romance')">Romance</button>
+            <button class="tablinks" onclick="openBook(event, 'Horror')">Horror</button>
+            <button class="tablinks" onclick="openBook(event, 'Biography')">Biography</button>
         </div>
     </div>
      
-    <!-- all books filter -->
-        <div id="allBooks" class="tabcontent">
-            <div class="flexContainer2 debug">
-                @foreach($books as $book)
-                    <div class="container debug">
-                        <img src="{{asset($book->img)}}" class="image" style="width:100%"/>
-                            <div class="middle">
-                                <div class="text">View Book</div>
-                            </div>
-                        {{-- <h3>{{$book->book_name}}</h3>
-                        <h3>{{$book->genre}}</h3> --}}
-                    </div>
-                @endforeach
-            </div>
-        </div>
+<!-- all books filter -->
+    <div id="allBooks" class="tabcontent">
+        <div class="flexContainer2 debug">
+            @foreach($books as $book)
+                <div class="container debug">
+                    <img src="{{asset($book->img)}}" class="image" style="width:100%"/>
+                        <div class="middle">
 
-    <!-- all fantasy books filter -->
-        <div id="Fantasy" class="tabcontent">
-            <div class="flexContainer2 debug">
-                @foreach($fantasy as $fBook)
-                    <div class="container debug">
-                        <img src="{{asset($fBook->img)}}" class="image" style="width:100%"/>
-                            <div class="middle">
+                            <a href="{{ url('bookInfo/' . $book->id) }}"> 
                                 <div class="text">View Book</div>
-                            </div>
-                        {{-- <h3>{{$book->book_name}}</h3>
-                        <h3>{{$book->genre}}</h3> --}}
-                    </div>
-                @endforeach
-            </div>
-        </div>
+                            </a>
 
-    <!-- all fantasy books filter -->
-            <div id="Thriller" class="tabcontent">
-                <div class="flexContainer2 debug">
-                    @foreach($thriller as $tBook)
-                        <div class="container debug">
-                            <img src="{{asset($tBook->img)}}" class="image" style="width:100%"/>
-                                <div class="middle">
+                            {{-- @foreach ($clickedBook as $cBook)
+                            <a target="_blank" href="{{ url('bookInfo' . $cBook->book_id) }}"> {{($cBook->book_name) }}
                                     <div class="text">View Book</div>
-                                </div>
-                            {{-- <h3>{{$book->book_name}}</h3>
-                            <h3>{{$book->genre}}</h3> --}}
+                            </a> 
+                            @endforeach   --}}
+
                         </div>
-                    @endforeach
                 </div>
+            @endforeach
+        </div>
+    </div>
+
+<!-- all fantasy books filter -->
+    <div id="Fantasy" class="tabcontent">
+        <div class="flexContainer2 debug">
+            @foreach($fantasy as $fBook)
+                <div class="container debug">
+                    <img src="{{asset($fBook->img)}}" class="image" style="width:100%"/>
+                        <div class="middle">
+                            <div class="text">View Book</div>
+                        </div>
+                    {{-- <h3>{{$book->book_name}}</h3>
+                    <h3>{{$book->genre}}</h3> --}}
+                </div>
+            @endforeach
+        </div>
+    </div>
+
+<!-- all fantasy books filter -->
+        <div id="Thriller" class="tabcontent">
+            <div class="flexContainer2 debug">
+                @foreach($thriller as $tBook)
+                    <div class="container debug">
+                        <img src="{{asset($tBook->img)}}" class="image" style="width:100%"/>
+                            <div class="middle">
+                                <div class="text">View Book</div>
+                            </div>
+                        {{-- <h3>{{$book->book_name}}</h3>
+                        <h3>{{$book->genre}}</h3> --}}
+                    </div>
+                @endforeach
             </div>
+        </div>
        
-    <!-- all Romance books filter -->
-        <div id="Romance" class="tabcontent">
-            <div class="flexContainer2 debug">
-                @foreach($romance as $rBook)
-                    <div class="container debug">
-                        <img src="{{asset($rBook->img)}}" class="image" style="width:100%"/>
-                            <div class="middle">
-                                <div class="text">View Book</div>
-                            </div>
-                        {{-- <h3>{{$book->book_name}}</h3>
-                        <h3>{{$book->genre}}</h3> --}}
-                    </div>
-                @endforeach
-            </div>
+<!-- all Romance books filter -->
+    <div id="Romance" class="tabcontent">
+        <div class="flexContainer2 debug">
+            @foreach($romance as $rBook)
+                <div class="container debug">
+                    <img src="{{asset($rBook->img)}}" class="image" style="width:100%"/>
+                        <div class="middle">
+                            <div class="text">View Book</div>
+                        </div>
+                    {{-- <h3>{{$book->book_name}}</h3>
+                    <h3>{{$book->genre}}</h3> --}}
+                </div>
+            @endforeach
         </div>
+    </div>
     
-    <!-- all  Horror books filter -->
-        <div id="Horror" class="tabcontent">
-            <div class="flexContainer2 debug">
-                @foreach($horror as $hBook)
-                    <div class="container debug">
-                        <img src="{{asset($hBook->img)}}" class="image" style="width:100%"/>
-                            <div class="middle">
-                                <div class="text">View Book</div>
-                            </div>
-                        {{-- <h3>{{$book->book_name}}</h3>
-                        <h3>{{$book->genre}}</h3> --}}
-                    </div>
-                @endforeach
-            </div>
+<!-- all  Horror books filter -->
+    <div id="Horror" class="tabcontent">
+        <div class="flexContainer2 debug">
+            @foreach($horror as $hBook)
+                <div class="container debug">
+                    <img src="{{asset($hBook->img)}}" class="image" style="width:100%"/>
+                        <div class="middle">
+                            <div class="text">View Book</div>
+                        </div>
+                    {{-- <h3>{{$book->book_name}}</h3>
+                    <h3>{{$book->genre}}</h3> --}}
+                </div>
+            @endforeach
         </div>
+    </div>
     
-    <!-- all Biography books filter -->
-        <div id="Biography" class="tabcontent">
-            <div class="flexContainer2 debug">
-                @foreach($biography as $bBook)
-                    <div class="container debug">
-                        <img src="{{asset($bBook->img)}}" class="image" style="width:100%"/>
-                            <div class="middle">
-                                <div class="text">View Book</div>
-                            </div>
-                        {{-- <h3>{{$book->book_name}}</h3>
-                        <h3>{{$book->genre}}</h3> --}}
-                    </div>
-                @endforeach
-            </div>
+<!-- all Biography books filter -->
+    <div id="Biography" class="tabcontent">
+        <div class="flexContainer2 debug">
+            @foreach($biography as $bBook)
+                <div class="container debug">
+                    <img src="{{asset($bBook->img)}}" class="image" style="width:100%"/>
+                        <div class="middle">
+                            <div class="text">View Book</div>
+                        </div>
+                    {{-- <h3>{{$book->book_name}}</h3>
+                    <h3>{{$book->genre}}</h3> --}}
+                </div>
+            @endforeach
         </div>
+    </div>
   
 
 @endsection

@@ -6,7 +6,10 @@
 
 @section('content')
 
-    <h1>Contact form</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae explicabo ab hic consectetur perspiciatis voluptatum ratione, sapiente iusto, corrupti repellat iure. Consequuntur soluta, nulla rem blanditiis consectetur architecto dolore sint!</p>
+    <div class="header3 debug">
+        <h1>Contact Me @ <br/> 
+            <a href="http://philipandes.com" target="_blank">Philip Andes</a>
+        </h1>
+    </div>
 
 @endsection
