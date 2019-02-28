@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poller+One');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
 
 
 /* GLOBAL ////////////////////////////////////////*/
@@ -51,17 +52,60 @@
     padding: 5px;
 }
 
+/* dropdown menu */
+.dropdown {
+    /* float: left; */
+    overflow: hidden;
+}
+  
+.dropdown .dropbtn {  
+    border: none;
+    outline: none;
+    color: #555;
+    /* padding: 14px 16px; */
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+  
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 @media all and (max-width: 600px) {
   
     .flexContainer1 {
-      flex-wrap: wrap;
+        flex-wrap: wrap;
     }
-    
+        
     .flexContainer1 > li {
-      flex-basis: 50%;
-      margin:5px;
+        flex-basis: 50%;
+        margin:5px;
     }
-  }
+}
 
 @media all and (max-width: 400px) {
     .flexContainer1 > li {
@@ -72,19 +116,23 @@
 /*home page /////////////////////////////////////////*/
 .header1 {
     display: flex;
-    background: url("/img/header_background1.jpg");
-    background-size: cover;  
+    /* background: url("/img/header_background1.jpg");
+    background-size: cover;
+    border: 1px solid #555;   */
     /* border-radius: 50%; */
-    margin: 120px 250px 0 250px;
-    padding: 20px;
-    border: 1px solid #555;
+    background: rgba(0, 0, 0, 0.2);
+    /* margin: 50px 250px 0 250px; */
+    /* margin: 50px 400px 0 400px; */
+    /* border: 1px solid #555; */
+    /* padding: 20px; */
+    margin-top: 80px;
 }
 
 .header1 > h1 {
     flex: 1;
     text-align: center;
     font-family: 'Poller One', cursive;
-    font-size: 50px;
+    font-size: 80px;
     color: #555;
     /* text-shadow: 0 0 5px #fff; */
 }
@@ -96,12 +144,10 @@
     padding: 5px;
     font-size: 20px;
     font-weight: bold;
-    background: #f1f1f1;
+    background: #fff;
     box-shadow: 2px 2px 5px #000;
     border: none;
-    border-radius: 12px;
-    
-    
+    border-radius: 12px;  
 }
 
 .homeButton:hover {
@@ -113,26 +159,27 @@
     cursor: pointer;
 }
 
-.homePage {
-    display: flex;
-    margin: 20px;
-    margin-top: 80px;
-    height: 50vh;
-    width: auto;
-    /* background: #000; */
-    /* background-image: url('/img/home_background1.jpg');
-    background-size: cover;
-    background-position: center; */
-    
+/* @media all and (max-width: 1024px) {
+    .header1 {
+        margin: 120px 200px 0 200px;
+    }
 }
 
-@media all and (max-width: 600px) {
-    .homePage {
-        margin-top: 20px;
-    }    
+@media all and (max-width: 900px) {
     .header1 {
-        margin-top: 0px;
-        margin: 0px;
+        margin: 120px 50px 0 50px;
+    }
+}
+
+@media all and (max-width: 768px) {
+    .header1 {
+        margin: 120px 50px 0 50px;
+    }
+} */
+
+@media all and (max-width: 600px) {
+    .header1 {
+        margin: 10px;
     }
 }
 
@@ -151,7 +198,7 @@
     background-size: cover;  
     /* border-radius: 50%; */
     margin: 20px 250px 0 250px;
-    border: 1px solid #555;
+    border: 3px groove #555;
 }
 
 .header2 > h1 {
@@ -210,6 +257,10 @@
     -ms-transform: translate(-50%, -50%);
     text-align: center;
 }
+
+.middle a {
+    text-decoration: none;
+}
   
 .container:hover .image {
     opacity: 0.3;
@@ -266,6 +317,62 @@
     color: #fff;
 }
 
+/* Book INFO PAGE ///////////////////////////////////////*/
+
+.bookInfo {
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.image1 {
+    max-width: 250px;
+    height: 350px;
+}
+
+.flexContainer3 {
+    flex: 1;
+    margin-left: 10px;
+    max-width: 450px;
+    border: 5px solid #555;
+
+}
+
+.flexContainer3 p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    color: #555;
+    margin-left: 10px;
+}
+
+.backButton {
+    padding: 5px;
+    background: #555;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    margin-left: 180px;
+    cursor: pointer;
+}
+
+.backButton:hover {
+    background: #fff;
+    color: #555;
+    border:2px solid #555;
+}
+
+@media all and (max-width: 600px) {
+    .backButton {
+        margin-left: 120px;
+    }    
+    .flexContainer3 {
+        margin-left: 0px;
+        margin-top: 10px;
+    }
+}
+
+
 
 /* CONTACT PAGE ///////////////////////////////////////*/
 .header3 {
@@ -307,3 +414,21 @@
     color: #fff;
 }
 
+
+@media all and (max-width: 768px) {
+    .header3 {
+        margin: 120px 0px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .header3 {
+        margin: 0;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .header3 {
+        margin: 0;
+    }
+}

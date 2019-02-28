@@ -27,17 +27,9 @@
                 <div class="container debug">
                     <img src="{{asset($book->img)}}" class="image" style="width:100%"/>
                         <div class="middle">
-
                             <a href="{{ url('bookInfo/' . $book->id) }}"> 
                                 <div class="text">View Book</div>
                             </a>
-
-                            {{-- @foreach ($clickedBook as $cBook)
-                            <a target="_blank" href="{{ url('bookInfo' . $cBook->book_id) }}"> {{($cBook->book_name) }}
-                                    <div class="text">View Book</div>
-                            </a> 
-                            @endforeach   --}}
-
                         </div>
                 </div>
             @endforeach
@@ -51,10 +43,10 @@
                 <div class="container debug">
                     <img src="{{asset($fBook->img)}}" class="image" style="width:100%"/>
                         <div class="middle">
-                            <div class="text">View Book</div>
+                            <a href="{{ url('bookInfo/' . $fBook->id) }}"> 
+                                <div class="text">View Book</div>
+                            </a>
                         </div>
-                    {{-- <h3>{{$book->book_name}}</h3>
-                    <h3>{{$book->genre}}</h3> --}}
                 </div>
             @endforeach
         </div>
@@ -67,10 +59,10 @@
                     <div class="container debug">
                         <img src="{{asset($tBook->img)}}" class="image" style="width:100%"/>
                             <div class="middle">
-                                <div class="text">View Book</div>
+                                <a href="{{ url('bookInfo/' . $tBook->id) }}"> 
+                                    <div class="text">View Book</div>
+                                </a>
                             </div>
-                        {{-- <h3>{{$book->book_name}}</h3>
-                        <h3>{{$book->genre}}</h3> --}}
                     </div>
                 @endforeach
             </div>
@@ -83,10 +75,10 @@
                 <div class="container debug">
                     <img src="{{asset($rBook->img)}}" class="image" style="width:100%"/>
                         <div class="middle">
-                            <div class="text">View Book</div>
+                            <a href="{{ url('bookInfo/' . $rBook->id) }}"> 
+                                <div class="text">View Book</div>
+                            </a>
                         </div>
-                    {{-- <h3>{{$book->book_name}}</h3>
-                    <h3>{{$book->genre}}</h3> --}}
                 </div>
             @endforeach
         </div>
@@ -99,10 +91,10 @@
                 <div class="container debug">
                     <img src="{{asset($hBook->img)}}" class="image" style="width:100%"/>
                         <div class="middle">
-                            <div class="text">View Book</div>
+                            <a href="{{ url('bookInfo/' . $hBook->id) }}"> 
+                                <div class="text">View Book</div>
+                            </a>
                         </div>
-                    {{-- <h3>{{$book->book_name}}</h3>
-                    <h3>{{$book->genre}}</h3> --}}
                 </div>
             @endforeach
         </div>
@@ -115,10 +107,10 @@
                 <div class="container debug">
                     <img src="{{asset($bBook->img)}}" class="image" style="width:100%"/>
                         <div class="middle">
-                            <div class="text">View Book</div>
+                            <a href="{{ url('bookInfo/' . $bBook->id) }}"> 
+                                <div class="text">View Book</div>
+                            </a>
                         </div>
-                    {{-- <h3>{{$book->book_name}}</h3>
-                    <h3>{{$book->genre}}</h3> --}}
                 </div>
             @endforeach
         </div>

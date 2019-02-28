@@ -28,26 +28,6 @@ class PagesController extends Controller
         return view('shop', compact('books', 'fantasy', 'thriller', 'romance', 'horror', 'biography'));
     }
 
-    public function bookInfo() {
-
-        $clickedBook = \App\Book::all();
-
-        //$clickedBook = \App\Book::all()->where('book_id', []);
-        // $clickedBook = \App\Book::find($book_id, []);
-
-        return view('bookInfo', compact('clickedBook'));
-
-        // function bookInfo($id) {
-        //     $bookInfo = Book::find($book_id);
-        //     return view('bookInfo', compact('bookInfo'));
-        // }
-
-    }
-
-    // public function about(){
-    //     return view('about');
-    // }
-
     public function contact(){
         return view('contact');
     }
