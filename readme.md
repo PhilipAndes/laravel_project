@@ -1,3 +1,17 @@
+#Books Laravel Project
+
+Started coding: dec, 2018.
+
+Week 7 bootcamp at CodeGorilla.
+
+This week we learned about Laravel and were assigned to make our first project with Laravel.
+
+I made a page about Books. 
+
+Was a lot of new information, like routes, views, models etc. I do understand the purpose of using this as it works really fast. 
+Also really handy with the predesigned logged in / register forms. 
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
